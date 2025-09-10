@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 import "./BasketPage.css";
-export default function BasketPage({ basket }) {
+
+export default function BasketPage() {
+  const basket = useSelector((state) => state.basket);
   return (
     <main className="basket-page">
       <h2>Корзина</h2>

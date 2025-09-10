@@ -1,3 +1,6 @@
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../store/basketSlice";
+
 import Avocado from "/avocado.jpg";
 import watermelon from "/watermelon.jpg";
 import bilberry from "/bilberry.jpg";
@@ -5,7 +8,8 @@ import kiwi from "/kiwi.jpg";
 import milk from "/milk.jpg";
 import tomato from "/tomato.jpg";
 
-export default function TopProducts({ addToBasket }) {
+export default function TopProducts() {
+  const dispatch = useDispatch();
   const Products = [
     { id: "1", src: Avocado, alt: "Avocado" },
     { id: "2", src: watermelon, alt: "watermelon" },
@@ -22,7 +26,7 @@ export default function TopProducts({ addToBasket }) {
         {Products.map((Product) => (
           <div key={Product.id} className="buyProduct">
             <img className="Products" src={Product.src} alt={Product.alt} />
-            <button onClick={() => addToBasket(Product)}>
+            <button onClick={() => dispatch(addToBasket(Product))}>
               Добавить в корзину
             </button>
           </div>

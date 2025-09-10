@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import CompanyHeader from "./components/CompanyHeader";
@@ -8,23 +7,9 @@ import TopProducts from "./components/TopProducts";
 import BasketPage from "./components/BasketPage";
 
 export default function App() {
-  const [basket, setBaske] = useState([]);
-
-  const addToBasket = (product) => {
-    setBaske((prev) => {
-      const exists = prev.find((item) => item.id === product.id);
-      if (exists) {
-        return prev.map((item) =>
-          item.id === product.id ? { ...item, count: item.count + 1 } : item
-        );
-      }
-      return [...prev, { ...product, count: 1 }];
-    });
-  };
-
   return (
     <Router>
-      <Header basket={basket} />
+      <Header />
       <Routes>
         <Route
           path="/"
@@ -32,11 +17,11 @@ export default function App() {
             <>
               <CompanyHeader />
               <Slider />
-              <TopProducts addToBasket={addToBasket} />
+              <TopProducts />
             </>
           }
         />
-        <Route path="/basket" element={<BasketPage basket={basket} />} />
+        <Route path="/basket" element={<BasketPage />} />
       </Routes>
     </Router>
   );
