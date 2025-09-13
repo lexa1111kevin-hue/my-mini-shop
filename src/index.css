@@ -14,11 +14,13 @@ body {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
+  margin-top: 20px;
 }
 
 .basket {
-  width: 40px;
+  width: 23px;
+  height: 23px;
 }
 header {
   height: 50px;
@@ -29,6 +31,37 @@ header {
   border-bottom: 1px solid #ccc;
   background: #fafafa;
 }
+.basket-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.basket-wrapper:hover {
+  background-color: #f0f0f0;
+}
+.basket-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: center;
+}
 .Products {
   height: 140px;
   width: 150px;
@@ -36,7 +69,7 @@ header {
 
 h3 {
   text-align: center;
-  font-size: 40px;
+  font-size: 25px;
   padding: 40px 0;
 }
 
@@ -49,4 +82,59 @@ section {
 }
 .buyProduct {
   display: grid;
+}
+.elementNenu {
+  margin: 0px 20px;
+}
+.navigationMenu {
+  display: flex;
+  list-style-type: none;
+  margin-right: 130px;
+}
+.elementNenu a {
+  text-decoration: none;
+  color: inherit;
+}
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.navigationMenu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.mobile-basket {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigationMenu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .navigationMenu.open {
+    display: flex;
+  }
+  .desktop-basket {
+    display: none;
+  }
+  .mobile-basket {
+    display: block;
+  }
 }

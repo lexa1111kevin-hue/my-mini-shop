@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://lexa1111kevin-hue.github.io/my-mini-shop/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

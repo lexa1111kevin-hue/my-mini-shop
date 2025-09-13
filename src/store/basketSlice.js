@@ -1,25 +1,30 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const basketSlise = createSlice({
-  name: "basket", // название состояния
-  initialState: [], // начальное состояние
+  name: "basket",
+  initialState: [],
   reducers: {
     addToBasket: (state, action) => {
-      //проверяем есть ли товар в корзине
       const exists = state.find((item) => item.id === action.payload.id);
       if (exists) {
-        // если товар уже есть увеличиваем count
         exists.count += 1;
       } else {
-        // если товара нет , увеличиваем
         state.push({ ...action.payload, count: 1 });
+      }
+    },
+    removeFromBasket: (state, action) => {
+      const index = state.findIndex((item) => item.id === action.payload);
+      if (index != -1) {
+        if (state[index].count > 1) {
+          state[index].count -= 1;
+        } else {
+          state.splice(index, 1);
+        }
       }
     },
   },
 });
 
-// экспорт актион для вызова в компонентах
-export const { addToBasket } = basketSlise.actions;
+export const { addToBasket, removeFromBasket } = basketSlise.actions;
 
-// экспортируем reduser(подключаем в store)
 export default basketSlise.reducer;

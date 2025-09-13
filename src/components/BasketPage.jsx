@@ -1,8 +1,10 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./BasketPage.css";
+import { removeFromBasket } from "../store/basketSlice";
 
 export default function BasketPage() {
   const basket = useSelector((state) => state.basket);
+  const dispatch = useDispatch();
   return (
     <main className="basket-page">
       <h2>Корзина</h2>
@@ -15,6 +17,9 @@ export default function BasketPage() {
               <img src={item.src} alt={item.alt} />
               <h4>{item.alt}</h4>
               <p>количество:{item.count} шт.</p>
+              <button onClick={() => dispatch(removeFromBasket(item.id))}>
+                удалить{" "}
+              </button>
             </div>
           ))}
         </div>

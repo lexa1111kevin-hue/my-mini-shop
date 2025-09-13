@@ -21,7 +21,7 @@ export default function TopProducts() {
 
   return (
     <main>
-      <h3>Топ продукт</h3>
+      <h3 id="top-products">Топ продукт</h3>
       <section>
         {Products.map((Product) => (
           <div key={Product.id} className="buyProduct">
