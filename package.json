@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://lexa1111kevin-hue.github.io/my-mini-shop/",
   "scripts": {
+    "predeploy": "npm run build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
