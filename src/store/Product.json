@@ -1,0 +1,37 @@
+[
+  { "id": "1", "src": "avocado.jpg", "alt": "Avocado" },
+  { "id": "2", "src": "watermelon.jpg", "alt": "Watermelon" },
+  { "id": "3", "src": "bilberry.jpg", "alt": "Bilberry" },
+  { "id": "4", "src": "kiwi.jpg", "alt": "Kiwi" },
+  { "id": "5", "src": "milk.jpg", "alt": "Milk" },
+  { "id": "6", "src": "tomato.jpg", "alt": "Tomato" },
+  { "id": "7", "src": "apple.jpg", "alt": "Apple" },
+  { "id": "8", "src": "izym.jpg", "alt": "Izym" },
+  { "id": "9", "src": "meat.jpg", "alt": "Meat" },
+  { "id": "10", "src": "spagetti.jpg", "alt": "Spagetti" },
+  { "id": "11", "src": "product/beans.png", "alt": "Beans" },
+  { "id": "12", "src": "product/broccoli.png", "alt": "Broccoli" },
+  { "id": "13", "src": "product/buckwheat.png", "alt": "Buckwheat" },
+  { "id": "14", "src": "product/iceberg.png", "alt": "Iceberg Lettuce" },
+  { "id": "15", "src": "product/kefir.png", "alt": "Kefir" },
+  { "id": "16", "src": "product/peas.png", "alt": "Peas" },
+  { "id": "17", "src": "product/penne.png", "alt": "Penne" },
+  { "id": "18", "src": "product/pepperGreen.png", "alt": "Green Pepper" },
+  { "id": "19", "src": "product/pepperYellow.png", "alt": "Yellow Pepper" },
+  { "id": "20", "src": "product/redcabbage.png", "alt": "Red Cabbage" },
+  { "id": "21", "src": "product/tea1.png", "alt": "Tea 1" },
+  { "id": "22", "src": "product/tea2.png", "alt": "Tea 2" },
+  { "id": "23", "src": "product/tea3.png", "alt": "Tea 3" },
+  {
+    "id": "24",
+    "src": "product/yogurtblueberry.png",
+    "alt": "Blueberry Yogurt"
+  },
+  { "id": "25", "src": "product/yogurtkivi.png", "alt": "KiwiYogurt" },
+  {
+    "id": "26",
+    "src": "product/yogurtraspberry.png",
+    "alt": "Raspberry Yogurt"
+  },
+  { "id": "27", "src": "product/asparagus.png", "alt": "Asparagus" }
+]

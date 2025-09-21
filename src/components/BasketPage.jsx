@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./BasketPage.css";
-import { removeFromBasket } from "../store/basketSlice";
+import { addToBasket, removeFromBasket } from "../store/basketSlice";
+import Products from "./Product";
 
 export default function BasketPage() {
   const basket = useSelector((state) => state.basket);
@@ -16,10 +17,21 @@ export default function BasketPage() {
             <div key={item.id} className="basket-card">
               <img src={item.src} alt={item.alt} />
               <h4>{item.alt}</h4>
-              <p>количество:{item.count} шт.</p>
-              <button onClick={() => dispatch(removeFromBasket(item.id))}>
-                удалить{" "}
-              </button>
+              <div className="counter">
+                <button
+                  className="btn-count"
+                  onClick={() => dispatch(removeFromBasket(item.id))}
+                >
+                  -
+                </button>
+                <p className="text-count">{item.count}</p>
+                <button
+                  className="btn-count"
+                  onClick={() => dispatch(addToBasket(item))}
+                >
+                  +
+                </button>
+              </div>
             </div>
           ))}
         </div>

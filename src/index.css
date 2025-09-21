@@ -9,7 +9,6 @@ body {
   font-family: "Roboto", sans-serif;
   background: #fffcf0;
 }
-
 .centered {
   text-align: center;
 }
@@ -30,7 +29,8 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  background: #fafafa;
+  background: #309418;
+  color: white;
 }
 .basket-wrapper {
   position: relative;
@@ -62,10 +62,6 @@ header {
   align-items: center;
   justify-content: center;
   font-weight: center;
-}
-.Products {
-  height: 140px;
-  width: 150px;
 }
 
 h3 {
@@ -102,6 +98,7 @@ section {
   border: none;
   cursor: pointer;
   display: none;
+  color: #fff;
 }
 .navigationMenu {
   display: flex;
@@ -131,6 +128,7 @@ section {
   }
   .navigationMenu.open {
     display: flex;
+    color: black;
   }
   .desktop-basket {
     display: none;
@@ -138,4 +136,130 @@ section {
   .mobile-basket {
     display: block;
   }
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 630px;
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.searchBox img {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.searchBox img:hover {
+  opacity: 1;
+}
+
+.pagination {
+  text-align: center;
+  margin: 30px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 16px;
+  background: #589e00;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  padding: 13px;
+  width: 194px;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.5s;
+  margin-top: 20px;
+}
+
+.button span {
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Кнопка вправо */
+.button.right span::after {
+  content: "\00bb"; /* » */
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button.right:hover span {
+  padding-right: 25px;
+}
+
+.button.right:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Кнопка влево */
+.button.left span::after {
+  content: "\00ab"; /* « */
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button.left:hover span {
+  padding-left: 25px;
+}
+
+.button.left:hover span::after {
+  opacity: 1;
+  left: 0;
+}
+
+.btn {
+  border: none;
+  background: #589e00;
+  width: 167px;
+  border-radius: 10px;
+  height: 27px;
+  color: white;
+}
+
+.counter {
+  display: flex;
+  justify-content: center; /* горизонтальное выравнивание по центру */
+  align-items: center; /* вертикальное выравнивание */
+  margin-top: 10px;
+}
+
+.btn-count {
+  width: 25px;
+  background: white;
+  border: 1px solid;
+  height: 20px;
+}
+.text-count {
+  border: 1px solid #181616;
+  border-radius: 1px;
+  width: 31px;
+  background: white;
+  font-size: 15px;
 }

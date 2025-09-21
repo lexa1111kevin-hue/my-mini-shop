@@ -29,9 +29,15 @@ export default function Slider() {
       />
       <h2>{slides[index].text}</h2>
       <div>
-        <button onClick={prevSlide}>назад</button>
-        <button onClick={nextSlide} style={{ marginLeft: "10px" }}>
-          вперед
+        <button className="button left" onClick={prevSlide}>
+          <span> назад</span>
+        </button>
+        <button
+          className="button right"
+          onClick={nextSlide}
+          style={{ marginLeft: "10px" }}
+        >
+          <span> вперед</span>
         </button>
       </div>
     </div>

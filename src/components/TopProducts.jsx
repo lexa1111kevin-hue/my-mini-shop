@@ -24,9 +24,12 @@ export default function TopProducts() {
       <h3 id="top-products">Топ продукт</h3>
       <section>
         {Products.map((Product) => (
-          <div key={Product.id} className="buyProduct">
+          <div key={Product.id} className="basket-card">
             <img className="Products" src={Product.src} alt={Product.alt} />
-            <button onClick={() => dispatch(addToBasket(Product))}>
+            <button
+              className="btn"
+              onClick={() => dispatch(addToBasket(Product))}
+            >
               Добавить в корзину
             </button>
           </div>
